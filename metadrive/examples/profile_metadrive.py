@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 import argparse
 import time
+import sys
+sys.path.append("/home/cwq/metadrive")
+print(sys.path)
+
 
 import numpy as np
 import logging
@@ -9,7 +13,7 @@ from metadrive.utils import setup_logger
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("--num-steps", "-n", default=10_000, type=int, help="Total steps of profiling.")
+    parser.add_argument("--num-steps", "-n", default=10000, type=int, help="Total steps of profiling.")
     args = parser.parse_args()
 
     print("Start to profile the efficiency of MetaDrive with 1000 maps and ~4 vehicles!")
